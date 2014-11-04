@@ -5,7 +5,10 @@
     "type": "project",
     "require": {
         "php": ">=5.3.3",
-        "silex/silex": "~1.0"
+        "silex/silex": "~1.2",
+        "monolog/monolog": "~1.11.0",
+        "symfony/config": "~2.5",
+        "symfony/yaml": "~2.5"
     },
     "autoload": {
         "psr-0": { "": "src/" }
