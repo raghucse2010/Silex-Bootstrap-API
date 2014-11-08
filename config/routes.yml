@@ -1,0 +1,4 @@
+default:
+    pattern: /
+    defaults: { _controller: 'DefaultController::indexAction' }
+    methods: [GET]

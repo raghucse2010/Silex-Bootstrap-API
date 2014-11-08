@@ -9,7 +9,6 @@ use Api\App;
 
 $app = new App();
 
-require __DIR__.'/../config/dev.php';
+require __DIR__ . '/../config/dev.php';
 
 $app->run();
-?>

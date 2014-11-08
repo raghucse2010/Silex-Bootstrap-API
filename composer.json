@@ -9,7 +9,8 @@
         "silex/silex": "~1.2",
         "monolog/monolog": "~1.11.0",
         "symfony/config": "~2.5",
-        "symfony/yaml": "~2.5"
+        "symfony/yaml": "~2.5",
+        "flint/flint": "~1.7@dev"
     },
     "require-dev": {
         "phpunit/phpunit": "3.7.*"
