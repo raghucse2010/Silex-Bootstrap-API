@@ -2,3 +2,28 @@ default:
     pattern: /
     defaults: { _controller: 'DefaultController::indexAction' }
     methods: [GET]
+
+user_list:
+    pattern: /users
+    defaults: { _controller: 'UserController::listAction' }
+    methods: [GET]
+
+user_fetch:
+    pattern: /users/{id}
+    defaults: { _controller: 'UserController::fetchAction' }
+    methods: [GET]
+
+user_create:
+    pattern: /users
+    defaults: { _controller: 'UserController::createAction' }
+    methods: [POST]
+
+user_update:
+    pattern: /users/{id}
+    defaults: { _controller: 'UserController::updateAction' }
+    methods: [PUT]
+
+user_delete:
+    pattern: /users/{id}
+    defaults: { _controller: 'UserController::deleteAction' }
+    methods: [DELETE]
