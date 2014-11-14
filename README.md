@@ -33,7 +33,6 @@ This is my personal view on what should be a boilerplate for a RESTful API using
 Almost everything! ;)
 
 * Design and implement the suggested API structure
-* Add Doctrine ORM
 * Add authentication
 * Add sample tests
 * Add a console

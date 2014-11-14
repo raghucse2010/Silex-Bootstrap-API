@@ -14,6 +14,14 @@ use Api\Transformer\UserTransformer;
 
 class UserController extends AbstractController
 {
+	/**
+	 * Get all the users.
+	 *
+	 * @param Request $request       Http Request.
+	 * @param Application $app       The silex app.
+	 *
+	 * @return Response
+	 */
     public function listAction(Request $request, Application $app)
     {
 		$users = $app["orm.em"]->getRepository('Api\Model\User')->findAll();
@@ -25,6 +33,14 @@ class UserController extends AbstractController
 		return new Response($fractal->createData($resource)->toJson());
     }
 
+	/**
+	 * Fetch a specific users by id.
+	 *
+	 * @param Request $request       Http Request.
+	 * @param Application $app       The silex app.
+	 *
+	 * @return Response
+	 */
     public function fetchAction(Request $request, Application $app)
     {
 		$user = $app["orm.em"]->getRepository('Api\Model\User')->find($request->get("id"));
@@ -39,6 +55,14 @@ class UserController extends AbstractController
 		return new Response($fractal->createData($resource)->toJson());
     }
 
+	/**
+	 * Create a new User.
+	 *
+	 * @param Request $request       Http Request.
+	 * @param Application $app       The silex app.
+	 *
+	 * @return Response
+	 */
     public function createAction(Request $request, Application $app)
     {
     	$user = new User($request->get("name"));
@@ -56,6 +80,14 @@ class UserController extends AbstractController
 		return new Response($fractal->createData($resource)->toJson(), Response::HTTP_CREATED);
     }
 
+	/**
+	 * Update a User.
+	 *
+	 * @param Request $request       Http Request.
+	 * @param Application $app       The silex app.
+	 *
+	 * @return Response
+	 */
     public function updateAction(Request $request, Application $app)
     {
 		$user = $app["orm.em"]->getRepository('Api\Model\User')->find($request->get("id"));
@@ -73,6 +105,14 @@ class UserController extends AbstractController
 		return new Response(null, Response::HTTP_NO_CONTENT);
     }
 
+	/**
+	 * Delete a User.
+	 *
+	 * @param Request $request       Http Request.
+	 * @param Application $app       The silex app.
+	 *
+	 * @return Response
+	 */
     public function deleteAction(Request $request, Application $app)
     {
 		$user = $app["orm.em"]->getRepository('Api\Model\User')->find($request->get("id"));
