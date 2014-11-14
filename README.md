@@ -1,4 +1,4 @@
-# Silex-Bootstrap-API - 0.1.0
+# Silex-Bootstrap-API - 0.2.0
 
 This is my personal view on what should be a boilerplate for a RESTful API using Silex.
 
